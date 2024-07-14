@@ -102,9 +102,9 @@ html{
   }
 }
 
-@media screen and (max-width: 750px) and (min-width: 426px) {
+@media screen and (max-width: 750px) and (min-width: 533px) {
   .principal .pieces img {
-    width: 5vw;
+    width: 7vw;
   }
   p {
     font-size: 3vw;
@@ -113,28 +113,54 @@ html{
     font-size: 3vw;
   }
 }
-
-@media screen and (max-width: 426px) and (min-width: 376px) {
+@media screen and (max-width: 533px) and (min-width: 376px) {
   .principal .pieces img {
-    width: 5vw;
+    width: 8vw;
   }
   p {
-    font-size: 2vw;
+    font-size: 3vw;
   }
   a {
-    font-size: 2vw;
+    font-size: 3vw;
   }
-  .principal {
-    margin: 10px;
+  h1 {
+    font-size: 8vw;
+  }
+  header .principal {
+    padding: 5px;
+    margin: 5px;
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+  .principal .item {
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px;
   }
 }
 
 @media screen and (max-width: 376px) {
   .principal .pieces img {
-    width: 5vw;
-    padding: 0px;
+    width: 8vw;
   }
-  .principal {
-    margin: 10px;
+  p {
+    font-size: 3vw;
+  }
+  a {
+    font-size: 3vw;
+  }
+  h1 {
+    font-size: 8vw;
+  }
+  header .principal {
+    padding: 5px;
+    margin: 5px;
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+  .principal .item {
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px;
   }
 }
