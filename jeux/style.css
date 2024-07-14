@@ -58,7 +58,7 @@ html{
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
   
-.principal .jeux .jeu img {
+.jeu img {
   padding: 10px;
   margin: 20px;
   width: 40vw;
@@ -67,9 +67,7 @@ html{
 }
 
 .principal .jeu {
-  padding: 10px;
-  margin: 20px;
-  width: 40vw;
+  padding: 0px;
 }
 
 @media screen and (max-width: 1100px) and (min-width: 750px) {
