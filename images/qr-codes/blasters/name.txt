@@ -28,5 +28,3 @@ for %%F in (*.png) do (
     set /a "numero+=1"
 )
 
-echo Tous les fichiers ont été renommés !
-pause
