@@ -21,17 +21,42 @@
             </div>
         </nav>
 
-        <button id="sortByNameAsc">Trier par nom (A-Z)</button>
-        <button id="sortByNameDesc">Trier par nom (Z-A)</button>
-        <button id="sortByDescriptionAsc">Trier par description (A-Z)</button>
-        <button id="sortByDescriptionDesc">Trier par description (Z-A)</button>
-        <button id="sortByTribu">Trier par tribu</button>
-        <button id="sortByIdAsc">Trier par ID (croissant)</button>
-        <button id="sortByIdDesc">Trier par ID (décroissant)</button>
-        <script src="script.js"></script>
-
         <div class="principal">
             <h1>Toutes les Âmes, Yo-Kai Watch Blasters</h1>
+            <div class="dropdown-class">
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown1')">Trier par nom</button>
+                    <div class="dropdown-content" id="dropdown1">
+                        <button id="sortByNameAsc">De A-Z</button>
+                        <button id="sortByNameDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown2')">Trier par stat</button>
+                    <div class="dropdown-content" id="dropdown2">
+                        <button id="sortByDescriptionAsc">De A-Z</button>
+                        <button id="sortByDescriptionDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown3')">Trier par tribu</button>
+                    <div class="dropdown-content" id="dropdown3">
+                        <button id="sortByTribu">Trier par tribu</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown4')">Trier par ID</button>
+                    <div class="dropdown-content" id="dropdown4">
+                        <button id="sortByIdAsc">Croissant</button>
+                        <button id="sortByIdDesc">Décroissant</button>
+                    </div>
+                </div>
+            </div>
+            
+            <input type="text" id="searchBar" placeholder="Rechercher par nom...">
+            <script src="script.js"></script>
+            <script src="script2.js"></script>
+            
             <div class="container">
                 <!-- Les ID des Tribus
                 Vaillants : 0
