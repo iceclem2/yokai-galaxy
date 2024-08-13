@@ -11,27 +11,37 @@ document.addEventListener('DOMContentLoaded', () => {
         case 'name':
           aValue = a.querySelector('.text b').textContent;
           bValue = b.querySelector('.text b').textContent;
-          break;
+          if (order === 'asc') {
+            return aValue.localeCompare(bValue);
+          } else {
+            return bValue.localeCompare(aValue);
+          }
         case 'description':
           aValue = a.querySelector('.text d').textContent.trim();
           bValue = b.querySelector('.text d').textContent.trim();
-          break;
+          if (order === 'asc') {
+            return aValue.localeCompare(bValue);
+          } else {
+            return bValue.localeCompare(aValue);
+          }
         case 'tribu':
           aValue = parseInt(a.dataset.tribu, 10);
           bValue = parseInt(b.dataset.tribu, 10);
-          break;
+          if (order === 'asc') {
+            return aValue - bValue;
+          } else {
+            return bValue - aValue;
+          }
         case 'id':
           aValue = parseInt(a.dataset.id, 10);
           bValue = parseInt(b.dataset.id, 10);
-          break;
+          if (order === 'asc') {
+            return aValue - bValue;
+          } else {
+            return bValue - aValue;
+          }
         default:
           return 0;
-      }
-
-      if (order === 'asc') {
-        return aValue > bValue ? 1 : -1;
-      } else {
-        return aValue < bValue ? 1 : -1;
       }
     });
 
