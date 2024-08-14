@@ -60,9 +60,11 @@ html{
   
 .principal .container img {
   width: 5vw;
-  height: auto;
+  height:fit-content;
+  margin: auto;
   margin-right: 5px;
   margin-left: 0px;
+  
 }
 
 .principal .item {
