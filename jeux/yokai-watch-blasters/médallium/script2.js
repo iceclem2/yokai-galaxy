@@ -17,7 +17,7 @@ fetch('data.json')
       console.log('Mise à jour des images à partir de l\'index:', index);
       for (let i = 0; i < 24; i++) {
         const imgElement = document.getElementById(`img${i}`);
-        const imageData = images[index + i];
+        const imageData = images[(index + i) % images.length]; // Utilisation du modulo pour boucler
         if (imgElement && imageData) {
           if (imageData['data-info'] === "none") {
             imgElement.style.visibility = 'hidden';
@@ -40,18 +40,14 @@ fetch('data.json')
 
     // Bouton Précédent
     document.getElementById('prevButton').addEventListener('click', () => {
-      if (currentIndex >= 24) {
-        currentIndex -= 24;
-        updateImages(currentIndex);
-      }
+      currentIndex = (currentIndex - 24 + images.length) % images.length;
+      updateImages(currentIndex);
     });
 
     // Bouton Suivant
     document.getElementById('nextButton').addEventListener('click', () => {
-      if (currentIndex + 24 < images.length) {
-        currentIndex += 24;
-        updateImages(currentIndex);
-      }
+      currentIndex = (currentIndex + 24) % images.length;
+      updateImages(currentIndex);
     });
   })
   .catch(error => console.error('Erreur:', error));
