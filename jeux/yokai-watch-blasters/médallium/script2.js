@@ -19,10 +19,15 @@ fetch('data.json')
         const imgElement = document.getElementById(`img${i}`);
         const imageData = images[index + i];
         if (imgElement && imageData) {
-          imgElement.src = imageData.src;
-          imgElement.alt = imageData.alt;
-          imgElement.dataset.name = imageData['data-name'];
-          imgElement.dataset.info = imageData['data-info'];
+          if (imageData['data-info'] === "none") {
+            imgElement.style.visibility = 'hidden';
+          } else {
+            imgElement.style.visibility = 'visible';
+            imgElement.src = imageData.src;
+            imgElement.alt = imageData.alt;
+            imgElement.dataset.name = imageData['data-name'];
+            imgElement.dataset.info = imageData['data-info'];
+          }
           console.log(`Image ${i} mise à jour avec`, imageData);
         } else {
           console.log(`Image ${i} ou données non trouvées`);
